@@ -20,6 +20,8 @@ TOOLS=(
     "curl"
     "vim"
     "htop"
+    "ntpdate"
+    "jq"
     "gobuster"
     "seclists"
     "ligolo-ng"
@@ -29,6 +31,7 @@ TOOLS=(
     "p7zip-full"
     "masscan"
     "feroxbuster"
+    "can-utils"
 )
 
 # Gitからインストールするツールのリポジトリリスト (リポジトリURLとディレクトリ名のペア)
@@ -36,8 +39,19 @@ GIT_REPOS=(
     # "https://github.com/someuser/sometool.git sometool"
     # "https://github.com/anotheruser/anothertool.git anothertool"
     https://github.com/peass-ng/PEASS-ng PEASS-ng
+    # winpeas
+    # adpeas
+    # mimikatz
+    # chisel
+    # PrivescCheck
+    # Printspoofer
+    # GodPotato
+    # DomainPasswordSpary
+    # netcat64exe
     https://github.com/diegocr/netcat.git netcat
     https://github.com/tomnomnom/waybackurls waybackurls
+    # https://github.com/arthaud/git-dumper
+    # https://github.com/GhostPack/Certify
 )
 
 # パッケージの更新
@@ -84,3 +98,7 @@ for repo in "${GIT_REPOS[@]}"; do
 done
 
 echo "Installation of all tools completed."
+
+# rockyou.txtの解凍
+
+sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
