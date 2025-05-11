@@ -102,3 +102,7 @@ echo "Installation of all tools completed."
 # rockyou.txtの解凍
 
 sudo gzip -d /usr/share/wordlists/rockyou.txt.gz
+
+# bashrcのバックアップと変更
+cp .bashrc .bashrc.bak
+echo 'export PS1="-[\[$(tput sgr0)\]\[\033[38;5;10m\]\d\[$(tput sgr0)\]-\[$(tput sgr0)\]\[\033[38;5;10m\]\t\[$(tput sgr0)\]]-[\[$(tput sgr0)\]\[\033[38;5;214m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[\033[38;5;196m\]\h\[$(tput sgr0)\]]-\n-[\[$(tput sgr0)\]\[\033[38;5;33m\]\w\[$(tput sgr0)\]]\\$ \[$(tput sgr0)\]"' >>.bashrc
